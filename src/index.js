@@ -3,12 +3,24 @@ import ReactDOM from "react-dom";
 
 const Alert = () => {
   const colorClasses = {
-    color: "red",
-	text4Red:"OMG! Something really bad has happended!",
-	text4Orange:"Well, it is not that bad after all!"
+    color: "reed",
+    text4Red: "OMG! Something really bad has happened!",
+    text4Orange: "Well, it is not that bad after all!",
   };
   //your component here
-
+  if (colorClasses.color === "red") {
+    return (
+      <div class="alert alert-danger" role="alert">
+        {colorClasses.text4Red}
+      </div>
+    );
+  } else {
+    return (
+      <div class="alert alert-warning" role="alert">
+        {colorClasses.text4Orange}      
+      </div>
+    );
+  }
 };
 
 // here is where the alert component is being used, you don't have to edit this part,
